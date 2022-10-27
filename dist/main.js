@@ -1,0 +1,2 @@
+(()=>{"use strict";var e={138:(e,r,t)=>{var c=t(138);document.querySelector(".searchBtn").addEventListener("click",(()=>{let e=document.querySelector(".search");(0,c.Z)(e.value),e.value=""}))}},r={};!function t(c){var o=r[c];if(void 0!==o)return o.exports;var u=r[c]={exports:{}};return e[c](u,u.exports,t),u.exports}(138)})();
+//# sourceMappingURL=main.js.map
