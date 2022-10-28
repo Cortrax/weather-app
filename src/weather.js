@@ -1,4 +1,7 @@
-const error = document.querySelector('.error');
+function errorMessage() {
+  const error = document.querySelector('.error');
+  error.classList.toggle('active');
+}
 
 async function fetchWeatherData(location) {
     const response = await fetch(
@@ -8,10 +11,10 @@ async function fetchWeatherData(location) {
     const weatherData = await response.json();
     console.log(weatherData);
     
-    if (response.status === 400) {
+    if (response.status === 400 || response.status === 440) {
       errorMessage();
     } else {
-      error.style.display = 'none';
+      errorMessage();
     }
   }
 

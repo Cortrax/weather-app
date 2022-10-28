@@ -13,15 +13,15 @@ body {
 
 .inputContainer {
     display: flex;
-    justify-content: flex-end;
+    flex-direction: column;
     margin-right: 40px;
     margin-top: 30px;
 }
 
 .searchDiv {
     display: flex;
-    margin-right: 10px;
     align-items: center;
+    justify-content: flex-end;
 }
 
 .search {
@@ -34,12 +34,21 @@ body {
     border: none;
     outline: none;
     background-color: var(--light-primary);
+    z-index: 2;
 }
 
 .error {
+color: rgb(209, 38, 38);
 margin-left: auto;
-margin-right: auto;
-color: brown;
+margin-right: 70px;
+margin-top: 5px;
+position: relative;
+transition: 0.3s ease-in-out;
+top: -30px;
+}
+
+.error.active {
+top: 0px;
 }
 
 .searchBtn {
