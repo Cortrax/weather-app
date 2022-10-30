@@ -14,7 +14,6 @@ function getWeatherData() {
     if (e.keyCode === 13) {
       fetchWeatherData(searchInput.value);
       searchInput.value = '';
-      renderData();
     }
   });
 }

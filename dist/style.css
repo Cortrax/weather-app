@@ -60,3 +60,21 @@ top: 0px;
     border: none;
     background-color: var(--light-primary);
 }
+
+.leftWeather {
+    display: flex;
+    flex-direction: column;
+    margin-left: 100px;
+    gap: 50px;
+    margin-top: 100px;
+}
+
+.temp, .humidity, .rain{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    background-color: wheat;
+    font-size: 5rem;
+}
