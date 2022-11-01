@@ -1,80 +1,120 @@
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 :root {
-    --light-primary: rgb(235, 235, 235);
+  --light-primary: rgb(235, 235, 235);
 }
 
 body {
-    background-color: #1e1e1e;
+  background-color: #1e1e1e;
+}
+
+.title {
+  margin-right: auto;
+  margin-left: 100px;
+  font-size: 3rem;
+  color: var(--light-primary);
 }
 
 .inputContainer {
-    display: flex;
-    flex-direction: column;
-    margin-right: 40px;
-    margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  margin-right: 100px;
+  margin-top: 30px;
 }
 
 .searchDiv {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 }
 
 .search {
-    text-align: center;
-    height: 30px;
-    width: 200px;
-    padding-left: 20px;
-    border-bottom-left-radius: 20px;
-    border-top-left-radius: 20px;
-    border: none;
-    outline: none;
-    background-color: var(--light-primary);
-    z-index: 2;
+  text-align: center;
+  height: 30px;
+  width: 200px;
+  padding-left: 20px;
+  border-bottom-left-radius: 20px;
+  border-top-left-radius: 20px;
+  border: none;
+  outline: none;
+  background-color: var(--light-primary);
+  z-index: 2;
 }
 
 .error {
-color: rgb(209, 38, 38);
-margin-left: auto;
-margin-right: 70px;
-margin-top: 5px;
-position: relative;
-transition: 0.3s ease-in-out;
-top: -30px;
+  color: rgb(209, 38, 38);
+  margin-left: auto;
+  margin-right: 70px;
+  margin-top: 5px;
+  position: relative;
+  transition: 0.3s ease-in-out;
+  top: -35px;
 }
 
 .error.active {
-top: 0px;
+  top: -10px;
 }
 
 .searchBtn {
-    height: 30px;
-    width: 30px;
-    border-bottom-right-radius: 20px;
-    border-top-right-radius: 20px;
-    padding: 0;
-    border: none;
-    background-color: var(--light-primary);
+  height: 30px;
+  width: 30px;
+  border-bottom-right-radius: 20px;
+  border-top-right-radius: 20px;
+  padding: 0;
+  border: none;
+  background-color: var(--light-primary);
 }
 
 .leftWeather {
-    display: flex;
-    flex-direction: column;
-    margin-left: 100px;
-    gap: 50px;
-    margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  margin-left: 200px;
+  margin-top: 100px;
+  color: white;
 }
 
-.temp, .humidity, .rain{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100px;
-    height: 100px;
-    background-color: wheat;
-    font-size: 5rem;
+.temp {
+  font-size: 5rem;
+}
+
+.feelsLike,
+.rain,
+.highLow {
+  display: flex;
+  align-items: center;
+  width: 500px;
+  height: 100px;
+  font-size: 2.5rem;
+  margin-top: 45px;
+}
+
+/* Right weather */
+
+.weather {
+  display: flex;
+  justify-content: space-between;
+}
+
+.rightWeather {
+  display: flex;
+  flex-direction: column;
+  margin-right: 200px;
+  gap: 50px;
+  margin-top: 100px;
+  color: white;
+}
+
+.humidity,
+.windSpeed,
+.pressure,
+.clouds {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 500px;
+  height: 100px;
+  font-size: 2.5rem;
 }

@@ -17,20 +17,34 @@
   <body>
     <div class="inputContainer">
       <div class="searchDiv">
+        <h1 class="title">Tempestas</h1>
         <input
           type="text"
           class="search"
           placeholder="Enter City or Zip Code"
         />
-        <button class="searchBtn"><i class="fa-solid fa-magnifying-glass"></i></button>
+        <button class="searchBtn">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
       </div>
       <p class="error">Place not found</p>
     </div>
 
-    <div class="leftWeather">
-      <div class="temp"></div>
-      <div class="humidity"></div>
-      <div class="rain"></div>
+    <div class="weather">
+      <div class="leftWeather">
+        <div class="place">Southington</div>
+        <div class="temp">50°</div>
+        <div class="feelsLike">Feels like: 54°</div>
+        <div class="highLow">High / low: 46° / 72°</div>
+        <div class="rain">Chance of rain: 50%</div>
+      </div>
+
+      <div class="rightWeather">
+        <div class="humidity">Humidity: 79%</div>
+        <div class="windSpeed">Wind speed: 2mph</div>
+        <div class="pressure">Pressure: 28.3</div>
+        <div class="clouds">Overcast</div>
+      </div>
     </div>
   </body>
   <script src="main.js"></script>

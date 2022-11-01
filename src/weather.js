@@ -17,10 +17,9 @@ async function fetchWeatherData(location) {
     const weatherData = await response.json();
     let weatherData2 = convertTemp(weatherData);
     displayData(weatherData2);
+    console.log(weatherData);
   }
 }
-
-export default fetchWeatherData;
 
 function convertTemp(weatherData) {
   // Kelvin to fahrenheit
@@ -33,5 +32,7 @@ function convertTemp(weatherData) {
 
 function displayData(weatherData2) {
   const temp = document.querySelector('.temp');
-  temp.innerHTML = `${weatherData2} `;
+  temp.innerHTML = `${weatherData2}°`;
 }
+
+export default fetchWeatherData;
