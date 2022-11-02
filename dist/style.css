@@ -8,7 +8,8 @@
 }
 
 body {
-  background-color: #1e1e1e;
+  background: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.5)),
+  url(photos/a2688fee6caacf8955c6c429713555bc.jpg);
 }
 
 .title {
@@ -81,7 +82,6 @@ body {
 }
 
 .feelsLike,
-.rain,
 .highLow {
   display: flex;
   align-items: center;
