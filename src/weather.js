@@ -15,6 +15,7 @@ async function fetchWeatherData(location) {
   } else {
     error.classList.remove('active');
     const weatherData = await response.json();
+    displayName(weatherData);
     displayTemp(weatherData);
     displayHumidity(weatherData);
     displayWindSpeed(weatherData);
@@ -22,6 +23,12 @@ async function fetchWeatherData(location) {
     displayClouds(weatherData);
     console.log(weatherData);
   }
+}
+
+function displayName(weatherData) {
+  const locationName = document.querySelector('.locationName');
+  const name = weatherData.name;
+  locationName.innerHTML = name;
 }
 
 function displayTemp(weatherData) {
@@ -60,7 +67,7 @@ function displayPressure(weatherData) {
 
 function displayClouds(weatherData) {
   const clouds = document.querySelector('.clouds');
-  console.log(weatherData.weather.description);
+  clouds.innerHTML = weatherData.weather[0].description;
 }
 
 export default fetchWeatherData;
