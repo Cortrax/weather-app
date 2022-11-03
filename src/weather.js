@@ -21,6 +21,7 @@ async function fetchWeatherData(location) {
     displayWindSpeed(weatherData);
     displayPressure(weatherData);
     displayClouds(weatherData);
+    generateGif(weatherData);
     console.log(weatherData);
   }
 }
@@ -68,6 +69,21 @@ function displayPressure(weatherData) {
 function displayClouds(weatherData) {
   const clouds = document.querySelector('.clouds');
   clouds.innerHTML = weatherData.weather[0].description;
+}
+
+// Generate gif to match weather
+
+async function generateGif(weatherData) {
+  let skyGiph = weatherData.weather[0].description;
+  
+  const response = await fetch(
+    `https://api.giphy.com/v1/gifs/translate?api_key=7a3l3lrg02kP62OaQ7i6Nc9d8TRymKBq&s=${skyGiph}`,
+    { mode: 'cors' }
+  );
+  const giphData = await response.json();
+  const img = document.querySelector('.giph');
+  img.src = giphData.data.images.original.url;
+  
 }
 
 export default fetchWeatherData;

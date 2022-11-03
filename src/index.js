@@ -1,5 +1,4 @@
 import fetchWeatherData from "./weather";
-import renderData from "./render";
 
 function getWeatherData() {
   let searchInput = document.querySelector('.search');

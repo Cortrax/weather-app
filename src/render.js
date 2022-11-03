@@ -1,1 +1,0 @@
-import fetchWeatherData from "./weather";
